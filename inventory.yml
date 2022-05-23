@@ -1,0 +1,17 @@
+all:
+  children:
+    loadbalancers:
+      hosts:
+        lb1:
+          ansible_host: "{{  lb1_ip }}"
+    local:
+      hosts:
+        control:
+          ansible_connection: local
+    ungrouped: {}
+    webservers:
+      hosts:
+        app1:
+          ansible_host: "{{ app1_ip }}"
+        app2:
+          ansible_host: "{{ app2_ip }}"

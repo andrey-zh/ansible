@@ -2,6 +2,9 @@
 
   - hosts: loadbalancers
     become: true
+    vars_files:
+    - vars/default.yml
+
     tasks:
       - name: Creating template
         template:

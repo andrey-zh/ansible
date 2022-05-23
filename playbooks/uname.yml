@@ -1,6 +1,9 @@
 # uname
 ---
   - hosts: webservers:loadbalancers
+    vars_files:
+    - vars/default.yml
+
     tasks:
       - name: Get OS type
         shell: uname

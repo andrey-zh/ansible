@@ -1,6 +1,9 @@
 # ping.yaml
 ---
   - hosts: all
+    vars_files:
+    - vars/default.yml
+
     tasks:
       - name: Ping all nodes
         action: ping

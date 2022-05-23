@@ -3,6 +3,10 @@
 ---
   - hosts: webservers:loadbalancers
     become: true
+    
+    vars_files:
+    - vars/default.yml
+
     tasks:
       - name: Update yum packages
         yum: 
